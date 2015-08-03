@@ -17,7 +17,7 @@
     specific language governing permissions and limitations
     under the License.
 -->
-<html height="100%">
+<html>
     <head>
         <meta charset="utf-8" />
         <meta name="format-detection" content="telephone=no" />
@@ -26,19 +26,27 @@
         <title>Hello World</title>
     </head>
     <body>
-		<table width="100%" height="100%">
-			<tr align=center width="100%" height="100%">
-				<td valign=middle >
-					<img src="img/logo.png">
-					<h1>PhoneGap</h1>
-					<div id="deviceready" class="blink">
-						<p class="event listening">Connecting to Device</p>
-						<h2 class="event received">Hello World!!!</h2>
-						<input type="text" />
-					</div>
-				</td>
+        <table class="app">
+			<tr>
+			<td width="20%">&nbsp;</td> 
+			<td width="60%" >
+            <!--<h1>PhoneGap</h1>
+            <div id="deviceready" class="blink">
+                <p class="event listening">Connecting to Device</p>
+                <h2 class="event received">Hello World!!!</h2>
+                <input type="text" />
+            </div>-->
+			<h1>Creating a user</h1>
+			<form>
+				<input type="text" name="user_id" placeholder="Login"/><br/>
+				<input type="number" name="age" placeholder="Age"/><br/>
+				<input type="password" name="password" placeholder="Password"/><br/>
+				<input type="button" value="Create"/>
+			</form>
+			</td>
+			<td width="20%">&nbsp;</td>
 			</tr>
-		</table>
+        </div>
         <script type="text/javascript" src="phonegap.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
         <script type="text/javascript">
