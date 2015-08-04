@@ -27,6 +27,8 @@ var app = {
     // 'load', 'deviceready', 'offline', and 'online'.
     bindEvents: function() {
         document.addEventListener('deviceready', this.onDeviceReady, false);
+        document.addEventListener('deviceready', this.openCalendar, false);
+        document.addEventListener('deviceready', this.addDayEntry, false);
     },
     // deviceready Event Handler
     //
@@ -49,7 +51,7 @@ var app = {
 };
 
 function openCalendar() {
-    window.open("https://www.google.com/calendar");
+    window.plugins.calendar.open();
 }
 
 function addDayEntry() {
