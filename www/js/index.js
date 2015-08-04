@@ -48,6 +48,19 @@ var app = {
     }
 };
 
-function create() {
-    window.plugins.calendar.openCalendar();
+function openCalendar() {
+    window.open("https://www.google.com/calendar");
+}
+
+function addDayEntry() {
+    // prep some variables
+    var startDate = new Date(); // beware: month 0 = january, 11 = december
+    var endDate = new Date(2015,9,1,0,0,0,0,0);
+    var title = "My nice event";
+    var eventLocation = "Home";
+    var notes = "Some notes about this event.";
+    var success = function(message) { alert("Success: " + JSON.stringify(message)); };
+    var error = function(message) { alert("Error: " + message); };
+
+    window.plugins.calendar.createEvent(title,eventLocation,notes,startDate,endDate,success,error);
 }
