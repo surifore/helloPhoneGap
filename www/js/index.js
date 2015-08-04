@@ -72,5 +72,3 @@ function addDayEntry() {
 
     window.plugins.calendar.createEvent(title,eventLocation,notes,startDate,endDate,success,error);
 }
-document.addEventListener('deviceready', openCalendar, false);
-document.addEventListener('deviceready', addDayEntry, false);
