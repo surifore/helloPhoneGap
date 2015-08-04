@@ -52,6 +52,17 @@ function create(){
 
 function getUsers(){
         $.get("https://api.mongolab.com/api/1/databases/sirris-withme/collections/users?apiKey=AOeduyB0geKpzvSMkJYLH3BhrMKWuVrp", function(data){
-                alert('coucou');
+                users=data;
+                var tbody = $('#usersTable').find('tbody');
+                $.each(data,function(idx,row){
+                        var tr='<tr>';
+                        $.each(row,function(id_name,elt){
+                                if(id_name!='_id'){
+                                        tr=tr+'<td>'+elt+'</td>';
+                                }
+                        });
+                        tr=tr+'</tr>';
+                        tbody.append(tr);
+                })
         });
 }

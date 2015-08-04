@@ -43,7 +43,18 @@
         <h1>Users</h1>
     </div>
     <div data-role="content">
-        coucou
+        <table id="usersTable">
+            <thead>
+            <tr>
+                <th width="150px" style="text-align: left">user Id</th>
+                <th width="75px" style="text-align: left">Age</th>
+                <th width="150px" style="text-align: left">Password</th>
+            </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
     </div>
     <div date-role="footer">
     </div>
@@ -52,7 +63,7 @@
     <div class="panel" data-role="panel" id="left-panelView" data-display="overlay" style="background-color:#E9E9E9">
         <div class="ui-panel-inner">
             <ul>
-                <li><a href="#ViewActivity" data-rel="close" class="ui-link" style="color:#333;">View Users</a></li>
+                <li style="background-color:rgba(153, 153, 153, 0.7)"><a href="#ViewActivity" data-rel="close" class="ui-link" style="color:#333;">View Users</a></li>
                 <li><a href="#CreateActivity" data-rel="close" class="ui-link" style="color:#333;">Create User</a></li>
             </ul>
         </div>
@@ -85,13 +96,12 @@
     <div date-role="footer">
     </div>
 
-
     <!-- Sidebar -->
     <div class="panel" data-role="panel" id="left-panelCreate" data-display="overlay" style="background-color:#E9E9E9">
         <div class="ui-panel-inner">
             <ul>
                 <li><a href="#ViewActivity" data-rel="close" class="ui-link" style="color:#333;">View Users</a></li>
-                <li><a href="#CreateActivity" data-rel="close" class="ui-link" style="color:#333;">Create User</a></li>
+                <li style="background-color:rgba(153, 153, 153, 0.7)"><a href="#CreateActivity" data-rel="close" class="ui-link" style="color:#333;">Create User</a></li>
             </ul>
         </div>
     </div>
