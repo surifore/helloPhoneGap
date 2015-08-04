@@ -49,7 +49,14 @@ var app = {
 };
 
 function openCalendar() {
-    window.plugins.calendar.open();
+    console.log("Going in");
+    try {
+        window.plugins.calendar.openCalendar();
+    } catch(err) {
+        console.log(err.message);
+    } finally {
+        console.log("Going out");
+    }
 }
 
 function addDayEntry() {
