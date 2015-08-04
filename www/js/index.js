@@ -54,8 +54,8 @@ function openCalendar() {
 
 function addDayEntry() {
     // prep some variables
-    var startDate = new Date(); // beware: month 0 = january, 11 = december
-    var endDate = new Date(2015,9,1,0,0,0,0,0);
+    var startDate = new Date(2015,7,1,0,0,0,0,0); // beware: month 0 = january, 11 = december
+    var endDate = new Date(2015,8,1,0,0,0,0,0);
     var title = "My nice event";
     var eventLocation = "Home";
     var notes = "Some notes about this event.";
