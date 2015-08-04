@@ -16,37 +16,6 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-var app = {
-    // Application Constructor
-    initialize: function() {
-        this.bindEvents();
-    },
-    // Bind Event Listeners
-    //
-    // Bind any events that are required on startup. Common events are:
-    // 'load', 'deviceready', 'offline', and 'online'.
-    bindEvents: function() {
-        document.addEventListener('deviceready', this.onDeviceReady, false);
-    },
-    // deviceready Event Handler
-    //
-    // The scope of 'this' is the event. In order to call the 'receivedEvent'
-    // function, we must explicity call 'app.receivedEvent(...);'
-    onDeviceReady: function() {
-        app.receivedEvent('deviceready');
-    },
-    // Update DOM on a Received Event
-    receivedEvent: function(id) {
-        var parentElement = document.getElementById(id);
-        var listeningElement = parentElement.querySelector('.listening');
-        var receivedElement = parentElement.querySelector('.received');
-
-        listeningElement.setAttribute('style', 'display:none;');
-        receivedElement.setAttribute('style', 'display:block;');
-
-        console.log('Received Event: ' + id);
-    }
-};
 
 function create(){
 	var user_id=$('#user_id').val();
@@ -54,13 +23,24 @@ function create(){
 	var password=$('#password').val();
 	
 	if(user_id==''||password==''){
-		$('#creationError').text('Please fill all the fields');
+		$('#creationError').text('Please fill the highlighted fields');
         $('#creationError').css('display','block')
 		return;
 	}else{
 		$.ajax( { url: "https://api.mongolab.com/api/1/databases/sirris-withme/collections/users?apiKey=AOeduyB0geKpzvSMkJYLH3BhrMKWuVrp",
 		  data: JSON.stringify( { "user_id" : user_id , "age" : age , "password" : password } ),
 		  type: "POST",
-		  contentType: "application/json" } );
+		  contentType: "application/json" })
+        .complete(function(){
+                $('#creationComplete').text('User created');
+                $('#creationComplete').css('display','block')
+                $('#user_id').val('');
+                $('#age').val('');
+                $('#password').val('');
+        })
+        .fail(function(e){
+            $('#creationError').text('Error '+e);
+            $('#creationError').css('display','block')
+        });
 	}
 }

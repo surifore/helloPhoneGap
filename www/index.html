@@ -32,27 +32,54 @@
         <title>Hello World</title>
     </head>
     <body>
-        <div data-role="page" id="ActivityFoo">
+    <div data-role="page" id="ActivityFoo">
+        <div data-role="header">
+            <h1>Header 1</h1>
+            <div class="topmenu" data-role="controlgroup" data-type="horizontal">
+                <a class="current-page-item" href="index.html#ActivityFoo" title="Foo" data-role="button"><i class="fontawesome icon-home"></i></a>
+                <a href="index.html#ActivityBar" title="Bar" data-role="button"><i class="fontawesome icon-ticket"></i></a>
+            </div>
+        </div>
+        <div data-role="content">
+            <h1>Content 1</h1>
+        </div>
+        <div date-role="footer">
+            <h1>Footer 1</h1>
+        </div>
+    </div>
+    <div data-role="page" id="ActivityBar">
+        <div data-role="header">
+            <h1>Header 2</h1>
+            <div class="topmenu" data-role="controlgroup" data-type="horizontal">
+                <a href="index.html#ActivityFoo" title="Foo" data-role="button"><i class="fontawesome icon-home"></i></a>
+                <a class="current-page-item" href="index.html#ActivityBar" title="Bar" data-role="button"><i class="fontawesome icon-ticket"></i></a>
+            </div>
+            <div data-role="content">
+                <h1>Content 2</h1>
+            </div>
+            <div date-role="footer">
+                <h1>Footer 2</h1>
+            </div>
+        </div>
+        <!--<div data-role="page" id="CreateActivity">
             <div data-role="header">
                 <h1>Creating a user</h1>
             </div>
             <div data-role="content">
                 <form>
-                    <input type="text" id="user_id" name="user_id" placeholder="Login" onblur="if(this.value==''){$(this).css('background-color','red')}else{$(this).css('background-color','white')}"
-                           onclick="$('#creationError').css('display','none');"/><br/>
-                    <input type="number" id="age" name="age" placeholder="Age" onclick="$('#creationError').css('display','none');"/><br/>
-                    <input type="password" id="password" name="password" placeholder="Password" onblur="if(this.value==''){$(this).css('background-color','red')}else{$(this).css('background-color','white')}"
-                           onclick="$('#creationError').css('display','none');"/><br/>
+                    <input type="text" id="user_id" name="user_id" placeholder="Login" onblur="if(this.value==''){$(this).css('background-color','rgba(255, 0, 0, 0.49)')}else{$(this).css('background-color','white')}"
+                           onclick="$('#creationError').css('display','none');$('#creationComplete').css('display','none');"/><br/>
+                    <input type="number" id="age" name="age" placeholder="Age" onclick="$('#creationError').css('display','none');$('#creationComplete').css('display','none');"/><br/>
+                    <input type="password" id="password" name="password" placeholder="Password" onblur="if(this.value==''){$(this).css('background-color','rgba(255, 0, 0, 0.49)')}else{$(this).css('background-color','white')}"
+                           onclick="$('#creationError').css('display','none');$('#creationComplete').css('display','none');"/><br/>
                     <input type="button" value="Create" onclick="create()"/><br/>
                     <label id="creationError" style="color:red;display:none"></label>
+                    <label id="creationComplete" style="color:green;display:none"></label>
                 </form>
             </div>
             <div date-role="footer">
             </div>
-        </div>
-        <script type="text/javascript" src="js/index.js"></script>
-        <script type="text/javascript">
-            app.initialize();
-        </script>
+        </div>-->
+        <script type="text/javascript" src="js/creation.js"></script>
     </body>
 </html>
