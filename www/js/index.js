@@ -16,7 +16,10 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-
+var users;
+$(function() {
+   getUsers();
+});
 function create(){
 	var user_id=$('#user_id').val();
 	var age=$('#age').val();
@@ -45,4 +48,10 @@ function create(){
             $('#creationError').css('display','block')
         });
 	}
+}
+
+function getUsers(){
+        $.get("https://api.mongolab.com/api/1/databases/sirris-withme/collections/users?apiKey=AOeduyB0geKpzvSMkJYLH3BhrMKWuVrp", function(data){
+                alert('coucou');
+        });
 }
