@@ -18,68 +18,76 @@
     under the License.
 -->
 <html>
-    <head>
-        <meta charset="utf-8" />
-        <meta name="format-detection" content="telephone=no" />
-        <meta name="viewport" content="user-scalable=yes, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height" />
+<head>
+    <meta charset="utf-8"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="viewport" content="initial-scale=1"/>
 
-        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"/>
 
-        <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
-        <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
-        <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-        <!--<link rel="stylesheet" type="text/css" href="css/index.css" />-->
-        <title>Hello World</title>
-    </head>
-    <body>
-        <div data-role="page" id="CreateActivity">
-            <div data-role="header">
-                <a href="#left-panel" data-theme="d" data-icon="arrow-r" data-iconpos="notext" data-shadow="false" data-iconshadow="false" class="ui-icon-nodisc ui-btn-left ui-btn ui-btn-corner-all ui-btn-icon-notext ui-btn-up-d" data-corners="true" data-wrapperels="span" title="Open left panel"><span class="ui-btn-inner">
-                    <span class="ui-btn-inner">
-                        <span class="ui-btn-text">Open left panel</span>
-                        <span class="ui-icon ui-icon-arrow-r">&nbsp;</span>
-                    </span>
-                </a>
-                <h1>Creating a user</h1>
-            </div>
-            <div data-role="content">
-                <form>
-                    <input type="text" id="user_id" name="user_id" placeholder="Login" onblur="if(this.value==''){$(this).css('background-color','rgba(255, 0, 0, 0.49)')}else{$(this).css('background-color','white')}"
-                           onclick="$('#creationError').css('display','none');$('#creationComplete').css('display','none');"/><br/>
-                    <input type="number" id="age" name="age" placeholder="Age" onclick="$('#creationError').css('display','none');$('#creationComplete').css('display','none');"/><br/>
-                    <input type="password" id="password" name="password" placeholder="Password" onblur="if(this.value==''){$(this).css('background-color','rgba(255, 0, 0, 0.49)')}else{$(this).css('background-color','white')}"
-                           onclick="$('#creationError').css('display','none');$('#creationComplete').css('display','none');"/><br/>
-                    <input type="button" value="Create" onclick="create()"/><br/>
-                    <label id="creationError" style="color:red;display:none"></label>
-                    <label id="creationComplete" style="color:green;display:none"></label>
-                </form>
-            </div>
-            <div date-role="footer">
-            </div>
+    <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 
-            <!-- Sidebar -->
-            <div data-role="panel" id="left-panel">
-                <a href="#ActivityFoo">next</a>
-            </div>
+    <link rel="stylesheet" type="text/css" href="css/index.css"/>
+    <title>Hello World</title>
+</head>
+<body>
+<div class="demowrapper" data-role="page" id="CreateActivity">
+    <div data-role="header">
+        <a href="#left-panel" data-theme="d" data-icon="bars" data-iconpos="notext" data-shadow="false"
+           data-iconshadow="false" data-corners="true" data-wrapperels="span" title="Open left panel">
+        </a>
+
+        <h1>Creating a user</h1>
+    </div>
+    <div data-role="content">
+        <form>
+            <input type="text" id="user_id" name="user_id" placeholder="Login"
+                   onblur="if(this.value==''){$(this).css('background-color','rgba(255, 0, 0, 0.49)')}else{$(this).css('background-color','white')}"
+                   onclick="$('#creationError').css('display','none');$('#creationComplete').css('display','none');"/><br/>
+            <input type="number" id="age" name="age" placeholder="Age"
+                   onclick="$('#creationError').css('display','none');$('#creationComplete').css('display','none');"/><br/>
+            <input type="password" id="password" name="password" placeholder="Password"
+                   onblur="if(this.value==''){$(this).css('background-color','rgba(255, 0, 0, 0.49)')}else{$(this).css('background-color','white')}"
+                   onclick="$('#creationError').css('display','none');$('#creationComplete').css('display','none');"/><br/>
+            <input type="button" value="Create" onclick="create()"/><br/>
+            <label id="creationError" style="color:red;display:none"></label>
+            <label id="creationComplete" style="color:green;display:none"></label>
+        </form>
+    </div>
+    <div date-role="footer">
+    </div>
+
+    <!-- Sidebar -->
+    <div class="panel" data-role="panel" id="left-panel" data-display="overlay" style="background-color:#E9E9E9">
+        <div class="ui-panel-inner">
+            <ul>
+                <li><a href="#" data-rel="close" class="ui-link" style="color:#333;">Previous</a></li>
+                <li><a href="#" data-rel="close" class="ui-link" style="color:#333;">Next</a></li>
+            </ul>
         </div>
+    </div>
+</div>
 
 
+<div data-role="page" id="ActivityFoo">
+    <div data-role="header">
+        <h1>Header 1</h1>
 
-        <div data-role="page" id="ActivityFoo">
-            <div data-role="header">
-                <h1>Header 1</h1>
-                <div class="topmenu" data-role="controlgroup" data-type="horizontal">
-                    <a class="current-page-item" href="index.html#ActivityFoo" title="Foo" data-role="button"><i class="fontawesome icon-home"></i></a>
-                    <a href="index.html#ActivityBar" title="Bar" data-role="button"><i class="fontawesome icon-ticket"></i></a>
-                </div>
-            </div>
-            <div data-role="content">
-                <h1>Content 1</h1>
-            </div>
-            <div date-role="footer">
-                <h1>Footer 1</h1>
-            </div>
+        <div class="topmenu" data-role="controlgroup" data-type="horizontal">
+            <a class="current-page-item" href="index.html#ActivityFoo" title="Foo" data-role="button"><i
+                    class="fontawesome icon-home"></i></a>
+            <a href="index.html#ActivityBar" title="Bar" data-role="button"><i class="fontawesome icon-ticket"></i></a>
         </div>
-        <script type="text/javascript" src="js/creation.js"></script>
-    </body>
+    </div>
+    <div data-role="content">
+        <h1>Content 1</h1>
+    </div>
+    <div date-role="footer">
+        <h1>Footer 1</h1>
+    </div>
+</div>
+<script type="text/javascript" src="js/creation.js"></script>
+</body>
 </html>

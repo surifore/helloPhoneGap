@@ -23,6 +23,8 @@ function create(){
 	var password=$('#password').val();
 	
 	if(user_id==''||password==''){
+        if(user_id==''){$('#user_id').css('background-color','rgba(255, 0, 0, 0.49)')}
+        if(password==''){$('#password').css('background-color','rgba(255, 0, 0, 0.49)')}
 		$('#creationError').text('Please fill the highlighted fields');
         $('#creationError').css('display','block')
 		return;
