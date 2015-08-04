@@ -47,3 +47,20 @@ var app = {
         console.log('Received Event: ' + id);
     }
 };
+
+function create(){
+	var user_id=$('#user_id').val();
+	var age=$('#age').val();
+	var password=$('#password').val();
+	
+	if(user_id==''||password==''){
+		$('#creationError').text('Please fill all the fields');
+        $('#creationError').css('display','block')
+		return;
+	}else{
+		$.ajax( { url: "https://api.mongolab.com/api/1/databases/sirris-withme/collections/users?apiKey=AOeduyB0geKpzvSMkJYLH3BhrMKWuVrp",
+		  data: JSON.stringify( [ { "user_id" : user_id }, { "age" : age }, { "password" : password } ] ),
+		  type: "POST",
+		  contentType: "application/json" } );
+	}
+}
