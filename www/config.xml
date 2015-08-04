@@ -64,6 +64,8 @@
     <!-- 
         <gap:plugin name="com.phonegap.plugins.barcodescanner" />
     -->
+    <!-- Calendar -->
+    <gap:plugin name="nl.x-services.plugins.calendar" />
 
     <!-- Define app icon for each platform. -->
     <icon src="icon.png" />

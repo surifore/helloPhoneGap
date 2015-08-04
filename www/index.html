@@ -21,7 +21,7 @@
     <head>
         <meta charset="utf-8" />
         <meta name="format-detection" content="telephone=no" />
-        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <meta name="viewport" content="user-scalable=yes, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height" />
         <link rel="stylesheet" type="text/css" href="css/index.css" />
         <title>Hello World</title>
     </head>
@@ -41,13 +41,12 @@
 				<input type="text" name="user_id" placeholder="Login"/><br/>
 				<input type="number" name="age" placeholder="Age"/><br/>
 				<input type="password" name="password" placeholder="Password"/><br/>
-				<input type="button" value="Create"/>
+				<input type="button" value="Create" onclick="create()"/>
 			</form>
 			</td>
 			<td width="20%">&nbsp;</td>
 			</tr>
         </div>
-        <script type="text/javascript" src="phonegap.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
         <script type="text/javascript">
             app.initialize();
