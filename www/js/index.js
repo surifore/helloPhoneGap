@@ -27,8 +27,6 @@ var app = {
     // 'load', 'deviceready', 'offline', and 'online'.
     bindEvents: function() {
         document.addEventListener('deviceready', this.onDeviceReady, false);
-        document.addEventListener('deviceready', this.openCalendar, false);
-        document.addEventListener('deviceready', this.addDayEntry, false);
     },
     // deviceready Event Handler
     //
@@ -66,3 +64,5 @@ function addDayEntry() {
 
     window.plugins.calendar.createEvent(title,eventLocation,notes,startDate,endDate,success,error);
 }
+document.addEventListener('deviceready', openCalendar, false);
+document.addEventListener('deviceready', addDayEntry, false);
