@@ -59,7 +59,7 @@ function create(){
 		return;
 	}else{
 		$.ajax( { url: "https://api.mongolab.com/api/1/databases/sirris-withme/collections/users?apiKey=AOeduyB0geKpzvSMkJYLH3BhrMKWuVrp",
-		  data: JSON.stringify( [ { "user_id" : user_id }, { "age" : age }, { "password" : password } ] ),
+		  data: JSON.stringify( { "user_id" : user_id , "age" : age , "password" : password } ),
 		  type: "POST",
 		  contentType: "application/json" } );
 	}
