@@ -53,6 +53,7 @@ function openCalendar() {
     try {
         window.plugins.calendar.openCalendar();
     } catch(err) {
+        $("#error").text(err.message);
         console.log(err.message);
     } finally {
         console.log("Going out");
