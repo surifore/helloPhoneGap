@@ -19,6 +19,7 @@
 var users;
 $(function() {
    getUsers();
+        //window.plugins.calendar.openCalendar();
 });
 function create(){
 	var user_id=$('#user_id').val();
