@@ -65,7 +65,7 @@ function getUsers(){
                                         tr=tr+'<td>'+elt+'</td>';
                                 }
                         });
-                        tr=tr+'<td>'+'<input type="button" onclick="deleteUser('+"'"+row._id.$oid+"'"+')"></input>'+'</td>';
+                        tr=tr+'<td>'+'<a href="#" class="ui-btn ui-shadow ui-corner-all ui-icon-delete ui-btn-icon-notext" onclick="deleteUser('+"'"+row._id.$oid+"'"+')">delete</a>'+'</td>';
                         tr=tr+'</tr>';
                         tbody.append(tr);
                 })
