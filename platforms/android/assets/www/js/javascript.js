@@ -17,10 +17,12 @@
  * under the License.
  */
 var users;
-$(function() {
-   getUsers();
-        //window.plugins.calendar.openCalendar();
+
+document.addEventListener("deviceready", function(){
+        getUsers();
+        window.plugins.calendar.openCalendar();
 });
+
 function create(){
 	var user_id=$('#user_id').val();
 	var age=$('#age').val();
