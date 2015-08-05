@@ -20,7 +20,6 @@ var users;
 
 document.addEventListener("deviceready", function(){
         getUsers();
-        window.plugins.calendar.openCalendar();
 });
 
 function create(){
