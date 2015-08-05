@@ -58,12 +58,7 @@ function getUsers(){
                 var tbody = $('#usersTable').find('tbody');
                 tbody.html('');
                 $.each(data,function(idx,row){
-                        var tr='<tr>';
-                        $.each(row,function(id_name,elt){
-                                if(id_name!='_id'){
-                                        tr=tr+'<td>'+elt+'</td>';
-                                }
-                        });
+                        var tr='<tr><td class="user_id">'+row.user_id+'</td><td class="age">'+row.age+'</td><td class="password">'+row.password+'</td>';
                         tr=tr+'<td>'+'<a href="#" class="ui-btn ui-shadow ui-corner-all ui-icon-delete ui-btn-icon-notext" onclick="deleteUser('+"'"+row._id.$oid+"'"+')">delete</a>'+'</td>';
                         tr=tr+'</tr>';
                         tbody.append(tr);
