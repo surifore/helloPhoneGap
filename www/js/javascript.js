@@ -65,8 +65,25 @@ function getUsers(){
                                         tr=tr+'<td>'+elt+'</td>';
                                 }
                         });
+                        tr=tr+'<td>'+'<input type="button" onclick="deleteUser('+"'"+row._id.$oid+"'"+')"></input>'+'</td>';
                         tr=tr+'</tr>';
                         tbody.append(tr);
                 })
         });
+}
+
+function deleteUser(id){
+    $.ajax( { url: "https://api.mongolab.com/api/1/databases/sirris-withme/collections/users/"+id+"?apiKey=AOeduyB0geKpzvSMkJYLH3BhrMKWuVrp",
+		  type: "DELETE",
+		  async: true,
+		  timeout: 300000,
+		  success: function (data) { },
+		  error: function (xhr, status, err) { } } )
+	  .complete(function(){
+	    getUsers();
+	  })
+	  .fail(function(e){
+	    alert(e);
+	  });
+
 }

@@ -30,7 +30,7 @@
     <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
     <script src="js/jquery.mobile-1.4.5.min.js"></script>
 
-    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <!--<link rel="stylesheet" type="text/css" href="css/style.css"/>-->
     <title>Hello World</title>
 </head>
 <body>
@@ -63,7 +63,7 @@
     <!-- Sidebar -->
     <div class="panel" data-role="panel" id="left-panelView" data-display="overlay" style="background-color:#E9E9E9">
         <div class="ui-panel-inner">
-            <ul>
+            <ul data-role="listview">
                 <li style="background-color:rgba(153, 153, 153, 0.7)"><a href="#ViewActivity" data-rel="close" class="ui-link" style="color:#333;" onclick="getUsers()">View Users</a></li>
                 <li><a href="#CreateActivity" data-rel="close" class="ui-link" style="color:#333;">Create User</a></li>
             </ul>
@@ -100,7 +100,7 @@
     <!-- Sidebar -->
     <div class="panel" data-role="panel" id="left-panelCreate" data-display="overlay" style="background-color:#E9E9E9">
         <div class="ui-panel-inner">
-            <ul>
+            <ul data-role="listview">
                 <li><a href="#ViewActivity" data-rel="close" class="ui-link" style="color:#333;" onclick="getUsers()">View Users</a></li>
                 <li style="background-color:rgba(153, 153, 153, 0.7)"><a href="#CreateActivity" data-rel="close" class="ui-link" style="color:#333;">Create User</a></li>
             </ul>
